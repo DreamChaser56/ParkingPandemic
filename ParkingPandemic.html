@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  top: 0;
+  background-image: url("ncat-kahlil-moore.jpg");
+  background-color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 33%;
+      }
+      
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      
+      .container {
+        padding: 2px 0px;
+      }
+      
+</style>
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+    <img src="844px-North_Carolina_A&T_Aggies_logo.svg.png" alt="A&T logo">
+    <h1> The Parking Pandemic </h1>
+    <div>
+      <h4>The mission of this project is to provide students and faculty with real-time visuals for assistance on acquiring an open parking space on campus
+      </h4>
+      <h1> Group Members </h1>
+      <div class="card" style="float: left;"> 
+        <img src="1600982230036.jpg" alt="Avatar" style="width:100%" height="150px">
+        <div class="container">
+          <h4><b>Nicholas Smith</b></h4>  
+        </div>
+      </div>
+      <div class="card" style="float: left;">
+        <img src="DSC_0557.JPG" alt="Avatar" style="width:100%" height="150px">
+        <div class="container">
+          <h4><b>Khiliel  Bullock</b></b></h4>  
+        </div>
+      </div>
+      <div class="card" style="float: left;">
+        <img src="IMG-5014.jpg" alt="Avatar" style="width:100%" height="150px">
+        <div class="container">
+          <h4><b>Samuel Folaranmi<b</b></h4> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="split right">
+  <div style="text-align: center;">
+    <img src="844px-North_Carolina_A&T_Aggies_logo.svg.png" alt="A&T logo" width="25%">
+    <div class="custom-select" style=" text-align: center;">
+        <select>
+          <option value="0">Select Parking Lot:</option>
+          <option value="1">Parking Services Lot</option>
+          <option value="2">Colliegate Commons Lot</option>
+        </select>
+      </div>
+  </div>
+  <select id="dynamic_select">
+    <option value="" selected>Pick a Website</option>
+    <option value="http://www.google.com">Google</option>
+    <option value="http://www.youtube.com">YouTube</option>
+    <option value="https://www.gurustop.net">GuruStop.NET</option>
+  </select>
+  
+  <script>
+      $(function(){
+        // bind change event to select
+        $('#dynamic_select').on('change', function () {
+            var url = $(this).val(); // get selected value
+            if (url) { // require a URL
+                window.location = url; // redirect
+            }
+            return false;
+        });
+      });
+  </script>
+
+</div>
+     
+</body>
+</html> 
